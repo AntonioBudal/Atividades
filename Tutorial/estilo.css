@@ -6,7 +6,7 @@ body,html{
 .conteudo {
     display:flex;
     flex-direction: row;
-    height: 100vh;
+    padding: 20px;
     flex-wrap: wrap;
     background-color: silver;
     margin: 20px;
@@ -14,7 +14,7 @@ body,html{
     justify-items: center;
     align-items: center;
     align-content: center;
-
+    
 }
 .card {
     width :200px;
