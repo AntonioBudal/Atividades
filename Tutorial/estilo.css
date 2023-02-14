@@ -1,0 +1,30 @@
+body,html{
+    padding:0px;
+    margin:0px;
+}
+
+.conteudo {
+    display:flex;
+    flex-direction: row;
+    height: 100vh;
+    flex-wrap: wrap;
+    background-color: silver;
+    margin: 20px;
+    justify-content:  center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+
+}
+.card {
+    width :200px;
+    height: 200px;
+    background-color: yellow;
+    margin: 5px;
+    display: flex;
+    flex-direction: center;
+    justify-content:  center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
