@@ -160,13 +160,15 @@ body {
     border-radius: 25%;
     margin: 5%;
     font-size: 20px;
-    box-shadow : 2px 2px rgba(255, 255, 255, 0.750);
-    animation : flipInX 0.5s;
+    
+    
     
 }
 
 .buttons2:hover {
-    background-color: black;
+    border-color: white;
+    border-style:hidden;
+    
     animation: pulse 1s;
 }
 
