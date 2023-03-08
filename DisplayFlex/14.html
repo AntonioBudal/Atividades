@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+    <style>
+          body{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .principal{
+            display: flex;
+            width:  700px;
+            height: 700px;
+            justify-content: space-around;
+            align-items: center;
+            background-color: cadetblue;
+            flex-direction: column;
+        }
+        .d1{
+            width: 95%;
+            height: 30%;
+            border-radius: 2px;
+            border-style: dotted;
+            border-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        .d2{
+            height: 90%;
+            width: 30%;
+            background-color: yellow;
+        }
+        .d3{
+            height: 90%;
+            width: 60%;
+            background-color: yellow;
+        }
+        .d4{
+            height: 90%;
+            width: 100%;
+            background-color : yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="d1">
+            <div class="d2"></div>
+            <div class="d3"></div>
+        </div>
+        <div class="d1">
+            <div class="d3"></div>
+            <div class="d2"></div>
+        </div>
+        <div class="d1">
+            <div class="d4"></div>
+        </div>
+    </div>
+</body>
+</html>
