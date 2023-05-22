@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foguete</title>
+    <style>
+        body
+        {
+            width: 100%;
+            height: 140vh;
+            overflow: hidden;
+            background-image: linear-gradient(180deg, rgb(0, 0, 48), rgb(11, 57, 155));
+        }
+        .foguete
+        {
+            position: absolute;
+            top: 42%;
+            left: 42.5%;
+        }
+        .chao
+        {
+            position: absolute;
+            filter:invert();
+            top: 55%;
+            left: 35%;
+        }
+        .nome
+        {
+            border: 1px solid white;
+            color: white;
+          
+            font-size: 20px;
+            height: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 94%;
+            left: 69%;
+            position: absolute;
+            width: 30%;
+
+        }
+    </style>
+</head>
+<body>
+    <img src="chao.png" id="chao" width="20%"  class="chao">
+    <img src="rocket.gif" id="foguete" width="80px" class="foguete">
+    <div class="nome">Antônio Budal Arins de Lima</div>
+</body>
+<script src="jquery-3.7.0.min.js"></script>
+<script>
+
+    var audio = new Audio('contagem.mp3');
+    var audio2 = new Audio('lancamento_foguete.mp3');
+    var audio3 = new Audio('main_houston_problem.mp3');
+
+    function playAudio() 
+    {
+        audio.play();
+    }
+    setTimeout(playAudio, 500)
+
+    function playAudio2() 
+    {
+        audio2.play();
+    }
+    setTimeout(playAudio2, 15000)
+
+    function pausarAudio()
+    {
+        audio.pause()
+    }
+    setTimeout(pausarAudio, 15000)
+
+    function pausarAudio2()
+    {
+        audio2.pause()
+    }
+    setTimeout(pausarAudio2, 20000)
+
+    function playAudio3() 
+    {
+        audio3.play();
+    }
+    setTimeout(playAudio3, 20000)
+
+
+    data = new Date()
+    tempo_inicial = data.getTime()
+
+    document.onkeydown = Pega_Tecla;
+    function Pega_Tecla(e) 
+    {
+        e = e || window.event;
+
+        tecla = e.keyCode;
+        console.log(tecla); // MOSTRA O CÓDIGO DA TECLA PRESSIONADA
+        
+        data = new Date()
+        tempo_final = data.getTime()
+
+        if(tempo_final - tempo_inicial > 1000)
+        {
+            tempo_inicial = tempo_final
+            if(tecla == 37)
+            {
+                x = x - 20
+            }
+            if(tecla == 39)
+            {
+                x = x + 20
+            }
+        }
+    }
+
+    teleporizador= setTimeout(Subir, 15000)
+    x = 43;
+    y = 10;
+    TOPO = "";
+    esquerda = "";
+
+    function Subir()
+    {    
+        TOPO = y + "%";
+        $("#foguete").animate({top:TOPO}, 5000)
+        temporizador = null
+        temporizador = setInterval(Descer, 1000)
+    }
+    function Descer()
+    {
+        y = y + 5
+        TOPO = y + "%"
+        esquerda = x + "%"
+        $("#foguete").animate({left:esquerda,top:TOPO},1000)
+        if(y > 40)
+        {
+            y = 40;
+        }
+    }
+</script>
+</html>
