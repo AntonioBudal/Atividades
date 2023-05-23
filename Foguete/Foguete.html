@@ -46,13 +46,13 @@
 </head>
 <body>
     <img src="chao.png" id="chao" width="20%"  class="chao">
-    <img src="rocket.gif" id="foguete" width="80px" class="foguete">
+    <img src="rocket.gif" id="foguete" width="80px" class="foguete" onclick="Foguetao()">
     <div class="nome">Antônio Budal Arins de Lima</div>
 </body>
 <script src="jquery-3.7.0.min.js"></script>
 <script>
-
-    var audio = new Audio('contagem.mp3');
+    function Foguetao(){
+        var audio = new Audio('contagem.mp3');
     var audio2 = new Audio('lancamento_foguete.mp3');
     var audio3 = new Audio('main_houston_problem.mp3');
 
@@ -139,5 +139,7 @@
             y = 40;
         }
     }
+    }
+    
 </script>
 </html>
